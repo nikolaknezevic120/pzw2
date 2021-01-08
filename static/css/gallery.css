@@ -1,0 +1,40 @@
+h3{
+  font-family: Comic Sans MS;
+  text-shadow: -2px 2px #FF0000;
+  text-align: center;
+  background-image: linear-gradient(to top, blue, white, red);
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 0.5%;
+  text-align: left;
+  width: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  width: 100%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

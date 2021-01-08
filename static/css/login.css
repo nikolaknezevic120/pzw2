@@ -1,0 +1,17 @@
+h1{
+	font-family: 'Trocchi', serif;
+	text-align: center;
+	font-size: 200%;
+	text-shadow: -1px 1px #FF0000;
+}
+
+h2{
+	font-family: 'Trocchi', serif;
+	text-align: center;
+	font-size: 200%;
+	text-shadow: -1px 1px #FF0000;
+}
+
+.col-md-12{
+	text-align: center;
+}

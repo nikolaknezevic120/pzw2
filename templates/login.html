@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Memories</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, inicial-scale=1">
+		<meta name="author" content="Nikola Knežević">
+		<meta name="keywords" content="Zadar, Croatia, Holiday, Memories, Apartments, odmor, sveti, petar, na, moru, hrvatska, dalmacija, dalmatia">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">	
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+  <div class="container - fluid">
+  
+    <div class="col-md-12">
+      <h1>Dobro dosli na web mjesto Memories apartmani - 
+      <br>
+      Sv. Petar na moru</h2>
+    </div>
+
+    <div class="col-md-4">
+      <a href='/home'><h4>Nastavi kao gost </h4></a>
+    </div>
+    
+    <div class="col-md-4">
+
+      <h4>Vec si boravio kod nas? <br> Odlicno, unesi svoje podatke </h4>
+          
+      <div class="col-md-4">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <form method="POST">
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="text" name="username" placeholder="Username">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Password</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="password" name="password" placeholder="Password">
+                </p>
+              </div>
+
+              <div class="field">
+                <p class="control">
+                  <button type="submit" class="button is-success">
+                    Prijava
+                  </button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide1.jpg')}}" width="100%" height="100%"/>
+			</div>	
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide2.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide3.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide4.jpg')}}" width="100%" height="100%"/>
+			</div>	
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide5.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide6.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+        <img src = "{{url_for ('static', filename = 'images/slide_images/slide7.jpg')}}" width="100%" height="100%"/>
+			</div>	
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide8.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide9.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide10.jpg')}}" width="100%" height="100%"/>
+			</div>	
+    </div>
+
+    <div class="col-md-12">
+      <div class="prognoza">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Danasnje vremenske prilike: {{ datetime.fromtimestamp( weather.dt ).strftime('%d.%m.%Y.')}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Grad</th>
+              <td>Min. Temp.</td>
+              <td>Max. Temp.</td>
+              <td>Izlazak sunca</td>
+              <td>Zalazak sunca</td>
+            </tr>
+            <tr>
+              <th scope="row">{{ weather.name }}</th>
+              <td>{{ weather.main.temp_min }} C</td>
+              <td>{{ weather.main.temp_max }} C</td>
+              <td>{{ datetime.fromtimestamp( weather.sys.sunrise ).strftime('%H:%M')}}</td>
+              <td>{{ datetime.fromtimestamp( weather.sys.sunset ).strftime('%H:%M')}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/slide.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/menures.js')}}"></script>
+</body>
+
+</html>

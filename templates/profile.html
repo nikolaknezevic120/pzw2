@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Memories</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, inicial-scale=1">
+		<meta name="author" content="Nikola Knežević">
+		<meta name="keywords" content="Zadar, Croatia, Holiday, Memories, Apartments, odmor, sveti, petar, na, moru, hrvatska, dalmacija, dalmatia">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+	</head>
+<body>
+    <div class="container - fluid">
+	
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="#">Memories Apartmani</a>
+                </div>
+
+                <div class="topnav" id="myTopnav">
+                    <a href="#" class="active"> Menu <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a>Hello {{g.user.username}}</a>
+                    <a href='/gallery'><span class="glyphicon glyphicon-picture"></span> Galerija</a>
+                    <a href="https://www.booking.com/hotel/hr/memories-apartments.html?aid=318615;label=New_English_EN_HR_27034798465-KbhXF8k7R6bhUiQ1j4t8
+                        YgS102131658985%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-297601666995%3Adsa-140566009465%3Alp1007616%3Ali%3Adec%3Adm;sid=343fa
+                        c6b3245943bad3d875e08f258ad;frindrecv=1">
+                        <span class="glyphicon glyphicon-check"></span> booking.com</a>
+                    <a class="sf-icon-telephone e-btn e-link" href="tel:+385996766766"><span class="glyphicon glyphicon-earphone"></span> Nazovi</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i></a>
+                    <a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-refresh"></span> Odjava</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="banner">
+            <div class="col-sm-11-fluid">
+                <img src = "{{url_for ('static', filename = 'images/memories1.png')}}" width="75%" height="50%"/>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>O nama</h2>
+                <p>
+                    Dobrodošli na stranice Memories apartmana koji se nalaze u Sv.Petru na Moru 
+                    kraj Zadra.Na našim stranicama možete saznati sve bitne informacije vezane 
+                    za najam jednog ili više apartmana.Na raspolaganju Vam stoje apartmani 
+                    veličine od 40m2 do 80m2.<br>
+                    Memories apartmani su izgrađeni 2018 godine te su u potpunosti novo 
+                    opremljeni sa predivnim vrtom i mirnom okolinom.
+                    Nalaze se u blizini Zadra te Biograda na moru,te su savršeni za 
+                    miran ljetni odmor sa vašom obitelji.
+                </p>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide1.jpg')}}" width="100%" height="100%"/>
+            </div>	
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide2.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide3.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide4.jpg')}}" width="100%" height="100%"/>
+            </div>	
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide5.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide6.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide7.jpg')}}" width="100%" height="100%"/>
+            </div>	
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide8.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide9.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide10.jpg')}}" width="100%" height="100%"/>
+            </div>	
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide11.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide12.jpg')}}" width="100%" height="100%"/>
+            </div><div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide13.jpg')}}" width="100%" height="100%"/>
+            </div>	
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide14.jpg')}}" width="100%" height="100%"/>
+            </div>
+            <div class="slide">
+                <img src = "{{url_for ('static', filename = 'images/slide_images/slide15.jpg')}}" width="100%" height="100%"/>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="svpetar">
+                <h2>Sveti Petar na moru</h2>
+                    <p>
+                    Sveti Petar na Moru je dobio naziv po crkvi Sveti Petra apostola iz 18. st. 
+                    U centru mjesta se mogu vidjeti ostaci srednjovjekovnih gospodarskih zgrada 
+                    koje su pripadale opatiji na Rogovu. <br> Nekad isključivo težačko mjesto, Sveti 
+                    Petar na Moru danas se sve više okreće turizmu. Nakon Domovinskog rata i 
+                    kraha prerađivačke industrije, ali i individualne poljoprivredne proizvodnje, 
+                    nekadašnji težaci Svetog Petra na Moru okreću se turizmu kao jedinoj 
+                    profitabilnoj gospodarskoj grani.
+                    </p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="col-sm-12">
+            <div class="footer-container">	
+                <div class="row">
+                    <div class="col-sm-3">
+                        Sveti Petar na Moru<br>
+                        Sveti Filip i Jakov 23207<br>
+                        memoriesapartments@gmail.com<br>
+                        +385 99 67 66 766<br>
+                        www.memories-apartments.com
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="100%" id="gmap_canvas" 
+                            src="https://maps.google.com/maps?q=apartmani%20memories&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <a href="https://thevpndeal.com/nordvpn-coupon/"></a>
+                        </div>
+                        <style>.mapouter{position:relative;left:-150px;top:50px;text-align:right;height:500px;width:600px;}.gmap_canvas 
+                        {overflow:hidden;background:none!important;height:50%;width:70%;}
+                        </style>
+                    </div>
+                    <div class="col-sm-3">
+                        <p><b>Korisni linkovi</b></p>
+                        <i class='far fa-hand-point-right'><a href="https://zadar.travel/hr/"></i>TZ Zadar</a><br>
+                        <i class='far fa-hand-point-right'><a href="http://www.sv-filipjakov.hr/"></i>TZ Sv. Filip i Jakov</a><br>
+                        <i class='far fa-hand-point-right'><a href="https://www.biogradnamoru.hr/"></i>Biograd na moru</a>
+                    </div>
+                    <div class="col-sm-3"> 
+                        <p><b>Grad:</b> {{ weather.name }}</p>
+                        <p><b>Datum: </b> {{ datetime.fromtimestamp( weather.dt ).strftime('%d.%m.%Y.')}}</p>
+                        <p><b>Posljednje mjerenje:</b> {{ datetime.fromtimestamp( weather.dt ).strftime('%H:%M')}}</p>
+                        <p><b>Temperatura:</b> {{ weather.main.temp }} C</p>
+                        <p><b>Osjet:</b> {{ weather.main.feels_like }} C</p>
+                        <p><b>Vlaznost zraka:</b> {{ weather.main.humidity }} %</p>
+                        <p><b>Brzina vjetra:</b> {{ weather.wind.speed }} km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>	
+
+    <script type="text/javascript" src="{{url_for('static', filename='js/menures.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/slide.js')}}"></script>
+</body>
+</html>
