@@ -111,46 +111,58 @@
         </div>
             
         <footer>
-            <div class="col-sm-12">
-                <div class="footer-container">	
-                    <div class="row">
-                        <div class="col-sm-3">
-                            Sveti Petar na Moru<br>
-                            Sveti Filip i Jakov 23207<br>
-                            memoriesapartments@gmail.com<br>
-                            +385 99 67 66 766<br>
-                            www.memories-apartments.com
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="gmap_canvas">
-                                <iframe width="100%" height="100%" id="gmap_canvas" 
-                                src="https://maps.google.com/maps?q=apartmani%20memories&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                <a href="https://thevpndeal.com/nordvpn-coupon/"></a>
-                            </div>
-                            <style>.mapouter{position:relative;left:-150px;top:50px;text-align:right;height:500px;width:600px;}.gmap_canvas 
-                            {overflow:hidden;background:none!important;height:50%;width:70%;}
-                            </style>
-                        </div>
-                        <div class="col-sm-3">
-                            <p><b>Korisni linkovi</b></p>
-                            <i class='far fa-hand-point-right'><a href="https://zadar.travel/hr/"></i>TZ Zadar</a><br>
-                            <i class='far fa-hand-point-right'><a href="http://www.sv-filipjakov.hr/"></i>TZ Sv. Filip i Jakov</a><br>
-                            <i class='far fa-hand-point-right'><a href="https://www.biogradnamoru.hr/"></i>Biograd na moru</a>
-                        </div>
-                        <div class="col-sm-3"> 
-                            <p><b>Grad:</b> {{ weather.name }}</p>
-                            <p><b>Datum: </b> {{ datetime.fromtimestamp( weather.dt ).strftime('%d.%m.%Y.')}}</p>
-                            <p><b>Posljednje mjerenje:</b> {{ datetime.fromtimestamp( weather.dt ).strftime('%H:%M')}}</p>
-                            <p><b>Temperatura:</b> {{ weather.main.temp }} C</p>
-                            <p><b>Osjet:</b> {{ weather.main.feels_like }} C</p>
-                            <p><b>Vlaznost zraka:</b> {{ weather.main.humidity }} %</p>
-                            <p><b>Brzina vjetra:</b> {{ weather.wind.speed }} km/h</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>	
+			<div class="col-sm-12">
+				<div class="footer-container">	
+					<div class="row">
+						<div class="col-sm-3">
+							Sveti Petar na Moru<br>
+							Sveti Filip i Jakov 23207<br>
+							memoriesapartments@gmail.com<br>
+							+385 99 67 66 766<br>
+							www.memories-apartments.com
+						</div>
+						<div class="col-sm-3">
+							<div class="gmap_canvas">
+								<iframe width="100%" height="100%" id="gmap_canvas" 
+								src="https://maps.google.com/maps?q=apartmani%20memories&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+								frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+								<a href="https://thevpndeal.com/nordvpn-coupon/"></a>
+							</div>
+							<style>.mapouter{position:relative;left:-150px;top:50px;text-align:right;height:500px;width:600px;}.gmap_canvas 
+							{overflow:hidden;background:none!important;height:50%;width:70%;}
+							</style>
+						</div>
+						<div class="col-sm-2">
+							<p><b>Korisni linkovi</b></p>
+							<i class='far fa-hand-point-right'><a href="https://zadar.travel/hr/"></i>TZ Zadar</a><br>
+							<i class='far fa-hand-point-right'><a href="http://www.sv-filipjakov.hr/"></i>TZ Sv. Filip i Jakov</a><br>
+							<i class='far fa-hand-point-right'><a href="https://www.biogradnamoru.hr/"></i>Biograd na moru</a>
+						</div>
+						<div class="col-sm-2"> 
+							<div class="card" style="width: 200px;">
+								<ul class="list-group list-group-flush">
+								  <li class="list-group-item">Grad:<b> {{ weather.name }} </b> </li>
+								  <li class="list-group-item">
+									  <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}.png"> {{ weather.weather[0].description }} </li>
+								  <li class="list-group-item">Datum: {{ datetime.fromtimestamp( weather.dt ).strftime('%d.%m.%Y.')}}</li>
+								  <li class="list-group-item">Posljednje mjerenje: {{ datetime.fromtimestamp( weather.dt ).strftime('%H:%M')}}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-2"> 
+							<div class="card" style="width: 200px;">
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Temperatura: {{ weather.main.temp }} C</li>
+								  <li class="list-group-item">Osjet: {{ weather.main.feels_like }} C</li>
+								  <li class="list-group-item">Vlaznost zraka: {{ weather.main.humidity }} %</li>
+								  <li class="list-group-item">Brzina vjetra: {{ weather.wind.speed }} km/h</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>	
     
         <script type="text/javascript" src="{{url_for('static', filename='js/menures.js')}}"></script>   
     </body>

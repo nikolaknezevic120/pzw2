@@ -26,10 +26,41 @@
     </div>
 
     <div class="col-md-4">
-      <a href='/home'><h4>Nastavi kao gost </h4></a>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide1.jpg')}}" width="100%" height="100%"/>
+			</div>	
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide2.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide3.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide4.jpg')}}" width="100%" height="100%"/>
+			</div>	
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide5.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide6.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+        <img src = "{{url_for ('static', filename = 'images/slide_images/slide7.jpg')}}" width="100%" height="100%"/>
+			</div>	
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide8.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide9.jpg')}}" width="100%" height="100%"/>
+			</div>
+			<div class="slide">
+				<img src = "{{url_for ('static', filename = 'images/slide_images/slide10.jpg')}}" width="100%" height="100%"/>
+			</div>	
     </div>
     
     <div class="col-md-4">
+
+      <a href='/home'><h4>Nastavi kao gost </h4></a>
 
       <h4>Vec si boravio kod nas? <br> Odlicno, unesi svoje podatke </h4>
           
@@ -65,64 +96,19 @@
 
     </div>
 
-    <div class="col-md-4">
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide1.jpg')}}" width="100%" height="100%"/>
-			</div>	
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide2.jpg')}}" width="100%" height="100%"/>
-			</div>
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide3.jpg')}}" width="100%" height="100%"/>
-			</div>
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide4.jpg')}}" width="100%" height="100%"/>
-			</div>	
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide5.jpg')}}" width="100%" height="100%"/>
-			</div>
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide6.jpg')}}" width="100%" height="100%"/>
-			</div>
-			<div class="slide">
-        <img src = "{{url_for ('static', filename = 'images/slide_images/slide7.jpg')}}" width="100%" height="100%"/>
-			</div>	
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide8.jpg')}}" width="100%" height="100%"/>
-			</div>
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide9.jpg')}}" width="100%" height="100%"/>
-			</div>
-			<div class="slide">
-				<img src = "{{url_for ('static', filename = 'images/slide_images/slide10.jpg')}}" width="100%" height="100%"/>
-			</div>	
-    </div>
-
-    <div class="col-md-12">
-      <div class="prognoza">
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">Danasnje vremenske prilike: {{ datetime.fromtimestamp( weather.dt ).strftime('%d.%m.%Y.')}}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Grad</th>
-              <td>Min. Temp.</td>
-              <td>Max. Temp.</td>
-              <td>Izlazak sunca</td>
-              <td>Zalazak sunca</td>
-            </tr>
-            <tr>
-              <th scope="row">{{ weather.name }}</th>
-              <td>{{ weather.main.temp_min }} C</td>
-              <td>{{ weather.main.temp_max }} C</td>
-              <td>{{ datetime.fromtimestamp( weather.sys.sunrise ).strftime('%H:%M')}}</td>
-              <td>{{ datetime.fromtimestamp( weather.sys.sunset ).strftime('%H:%M')}}</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="col-md-4"> 
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Grad: {{ weather.name }}</li>
+          <li class="list-group-item">
+            <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}.png"> {{ weather.weather[0].description }} </li>
+          <li class="list-group-item">Datum: {{ datetime.fromtimestamp( weather.dt ).strftime('%d.%m.%Y.')}}</li>
+          <li class="list-group-item">Posljednje mjerenje: {{ datetime.fromtimestamp( weather.dt ).strftime('%H:%M')}}</li>
+          <li class="list-group-item">Temperatura: {{ weather.main.temp }} C</li>
+          <li class="list-group-item">Osjet: {{ weather.main.feels_like }} C</li>
+          <li class="list-group-item">Vlaznost zraka: {{ weather.main.humidity }} %</li>
+          <li class="list-group-item">Brzina vjetra: {{ weather.wind.speed }} km/h</li>
+        </ul>
       </div>
     </div>
 
