@@ -12,11 +12,11 @@ Takoder se na svim stranicama nalazi i tablica sa trenutnim vremenskim podatcima
 U mobilnoj verziji, traka za navigaciju unutar aplikacije se pretvara u padajuci "hamburger" izbornik.
 
 ### Log in
-Buduci da aplikacija nije povezana sa bazom podataka, podatci za log in nalaza se u app.py datoteci (lista users:
-username='Nikola', password='password'
-username='Luka', password='123'
-username='Andela', password='321'
-username='Mateo', password='456'
+Buduci da aplikacija nije povezana sa bazom podataka, podatci za log in nalaza se u app.py datoteci (lista users:<br>
+username='Nikola', password='password'<br>
+username='Luka', password='123'<br>
+username='Andela', password='321'<br>
+username='Mateo', password='456'<br>
 username='Elvis', password='789'
 )
 
