@@ -21,10 +21,10 @@ username='Elvis', password='789'<br>
 )
 
 ## Pokretanje aplikacije
-1.Instaliramo virtualno okruženje u CMD ili Poweshell-u ( py -m venv venv ili python -m venv venv)
-2.Ulazimo u direktorij Scripts unutar venv foldera kako bi ga aktivirali (venv\Scripts\activate)
-3.Instalacija sa requirements (pip install -r requirements.txt)
-4.set FLASK_APP=app.py
-5.set FLASK_DEBUG=1
-6.flask run
+1.Instaliramo virtualno okruženje u CMD ili Poweshell-u ( py -m venv venv ili python -m venv venv)<br>
+2.Ulazimo u direktorij Scripts unutar venv foldera kako bi ga aktivirali (venv\Scripts\activate)<br>
+3.Instalacija sa requirements (pip install -r requirements.txt)<br>
+4.set FLASK_APP=app.py<br>
+5.set FLASK_DEBUG=1<br>
+6.flask run<br><br>
 7.Otvoriti browser te upisati(http://127.0.0.1:5000/)
