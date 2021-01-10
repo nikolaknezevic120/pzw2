@@ -17,7 +17,7 @@ username='Nikola', password='password'<br>
 username='Luka', password='123'<br>
 username='Andela', password='321'<br>
 username='Mateo', password='456'<br>
-username='Elvis', password='789'
+username='Elvis', password='789'<br>
 )
 
 ## Pokretanje aplikacije
