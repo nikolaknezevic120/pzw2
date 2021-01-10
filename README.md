@@ -11,6 +11,15 @@ Na savim stranicama osim pocetne nalazi se i opcija za direktni pozivv na sluzbe
 Takoder se na svim stranicama nalazi i tablica sa trenutnim vremenskim podatcima koji se preuzimaju sa https://openweathermap.org/
 U mobilnoj verziji, traka za navigaciju unutar aplikacije se pretvara u padajuci "hamburger" izbornik.
 
+### Log in
+Buduci da aplikacija nije povezana sa bazom podataka, podatci za log in nalaza se u app.py datoteci (lista users:
+username='Nikola', password='password'
+username='Luka', password='123'
+username='Andela', password='321'
+username='Mateo', password='456'
+username='Elvis', password='789'
+)
+
 ## Pokretanje aplikacije
 1.Instaliramo virtualno okruženje u CMD ili Poweshell-u ( py -m venv venv ili python -m venv venv)
 2.Ulazimo u direktorij Scripts unutar venv foldera kako bi ga aktivirali (venv\Scripts\activate)
