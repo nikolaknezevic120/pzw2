@@ -26,5 +26,5 @@ username='Elvis', password='789'<br>
 3.Instalacija sa requirements (pip install -r requirements.txt)<br>
 4.set FLASK_APP=app.py<br>
 5.set FLASK_DEBUG=1<br>
-6.flask run<br><br>
+6.flask run<br>
 7.Otvoriti browser te upisati(http://127.0.0.1:5000/)
