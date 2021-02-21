@@ -5,6 +5,7 @@ from wtforms import StringField, SubmitField, Form, BooleanField, PasswordField,
 from wtforms.validators import DataRequired
 from datetime import datetime
 import requests
+from api import dataweather
 
 def create_app():
     app = Flask(__name__)
@@ -34,42 +35,27 @@ users.append(User(id=5, username='Elvis', password='789'))
 
 @app.route('/home')
 def index():
-    url = 'http://api.openweathermap.org/data/2.5/weather'
-    parameters = {'q': 'zadar', 'appid': 'bd62128bfda0efc6224032f105075a21', 'lang':'hr', 'units':'metric'}
-    response = requests.get(url, parameters)
-    weather = response.json()
+    weather = dataweather()
     return render_template("index.html", weather = weather, datetime = datetime)
 
 @app.route('/profile')
 def indexprofile():
-    url = 'http://api.openweathermap.org/data/2.5/weather'
-    parameters = {'q': 'zadar', 'appid': 'bd62128bfda0efc6224032f105075a21', 'lang':'hr', 'units':'metric'}
-    response = requests.get(url, parameters)
-    weather = response.json()
+    weather = dataweather()
     return render_template("profile.html", weather = weather, datetime = datetime)
 
 @app.route('/')
 def indexlogin():
-    url = 'http://api.openweathermap.org/data/2.5/weather'
-    parameters = {'q': 'zadar', 'appid': 'bd62128bfda0efc6224032f105075a21', 'lang':'hr', 'units':'metric'}
-    response = requests.get(url, parameters)
-    weather = response.json()
+    weather = dataweather()
     return render_template("login.html", weather = weather, datetime = datetime)
 
 @app.route('/gallery')
 def indexgallery():
-    url = 'http://api.openweathermap.org/data/2.5/weather'
-    parameters = {'q': 'zadar', 'appid': 'bd62128bfda0efc6224032f105075a21', 'lang':'hr', 'units':'metric'}
-    response = requests.get(url, parameters)
-    weather = response.json()
+    weather = dataweather()
     return render_template("gallery.html", weather = weather, datetime = datetime)
 
 @app.route('/guestgallery')
 def guestgallery():
-    url = 'http://api.openweathermap.org/data/2.5/weather'
-    parameters = {'q': 'zadar', 'appid': 'bd62128bfda0efc6224032f105075a21', 'lang':'hr', 'units':'metric'}
-    response = requests.get(url, parameters)
-    weather = response.json()
+    weather = dataweather()
     return render_template("guestgallery.html", weather = weather, datetime = datetime)
 
 @app.before_request
